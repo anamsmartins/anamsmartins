@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm Ana Martins</h1>
 
-<p align="center">Junior Software Engineer · Creative Developer</p>
+<p align="center">Software Engineer · Creative Developer</p>
 
 <h2 align="center">ℹ️ Check out my work</h2>
 
