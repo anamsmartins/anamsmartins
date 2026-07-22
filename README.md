@@ -11,8 +11,8 @@ Full-stack engineer building reliable backends with **Java & Spring** and clean 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
 
-<p align="left">
-  <img src="metrics.svg" alt="GitHub activity" width="100%"/>
+<p align="center">
+  <img src="metrics.svg" alt="GitHub activity" width="50%"/>
 </p>
 
 # 
