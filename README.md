@@ -10,9 +10,9 @@ Full-stack engineer building reliable backends with **Java & Spring** and clean 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-
+<br>
 <p align="left">
-  <img src="metrics.svg" alt="GitHub activity" width="50%"/>
+  <img src="metrics.svg" alt="GitHub activity" width="45%"/>
 </p>
 
 # 
