@@ -1,27 +1,33 @@
-<h1 align="center">Hi 👋, I'm Ana Martins</h1>
+# 🌊 Ana Martins
 
-<p align="center">Software Engineer · Creative Developer</p>
+**`Software Engineer (Java ⌇ React)`**
 
-<h2 align="center">ℹ️ Check out my work</h2>
+Full-stack engineer building reliable backends with **Java & Spring** and clean interfaces with **React**. Research-curious, detail-oriented, and always up for turning a good idea into software that actually ships.
 
-<p >
-  <strong>⌇</strong> Academic projects —
-  <a href="https://github.com/Academcis" target="_blank">github.com/Academcis</a>
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+
+
+<p align="left">
+  <img src="metrics.svg" alt="GitHub activity" width="100%"/>
 </p>
 
-<p >
-  <strong>⌇</strong> Research publications —
-  <a href="https://orcid.org/0009-0009-1892-4133" target="_blank">ORCID profile</a>
-</p>
+# 
+
+ℹ️ Check out my work
+
+[![Website](https://img.shields.io/badge/website-e39c64?style=for-the-badge&logo=pagekit)](https://anamsmartins.github.io/)
+[![Academic Projects](https://img.shields.io/badge/academic%20projects-2D3250?style=for-the-badge&logo=htmlacademy)](https://github.com/Academcis)
+[![Research Publications](https://img.shields.io/badge/research%20publications-A56F63?style=for-the-badge&logo=readdotcv)](https://orcid.org/0009-0009-1892-4133)
+
+# 
+
+📪 Reach me here
 
 <p >
-  <strong>⌇</strong> Personal website —
-  <a href="https://anamsmartins.github.io/" target="_blank">anamsmartins.github.io</a>
-</p>
-
-<h2 align="center"> 📪 Reach me here</h2>
-
-<p align="center">
   <a href="mailto:anaritamsmartins@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
