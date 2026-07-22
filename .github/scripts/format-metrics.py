@@ -56,15 +56,19 @@ def extract_calendar_field(source: str) -> str:
 
 
 def extract_repos_field(source: str) -> str:
-    match = re.search(
-        r'(<div class="field">\s*<svg[^>]*viewBox="0 0 16 16"[^>]*>.*?</svg>\s*'
-        r"Contributed to \d+ repositories\s*</div>)",
-        source,
-        re.DOTALL,
-    )
-    if not match:
+    contrib = re.search(r"Contributed to \d+ repositories", source)
+    if not contrib:
         raise ValueError("Could not find repositories field in generated SVG")
-    return match.group(1)
+
+    field_start = source.rfind('<div class="field">', 0, contrib.start())
+    if field_start == -1:
+        raise ValueError("Could not find repositories field wrapper")
+
+    field_end = source.find("</div>", contrib.end())
+    if field_end == -1:
+        raise ValueError("Could not find repositories field end")
+
+    return source[field_start : field_end + len("</div>")]
 
 
 def build_svg(base_styles: str, calendar: str, repos: str) -> str:

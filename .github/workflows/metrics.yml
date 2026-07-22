@@ -34,8 +34,10 @@ jobs:
           grep -q 'height="52"' metrics.svg
           grep -q 'viewBox="0 0 480 52"' metrics.svg
           grep -q 'Contributed to' metrics.svg
+          test "$(grep -c 'class="field calendar"' metrics.svg)" -eq 1
           ! grep -q 'class="avatar"' metrics.svg
           ! grep -q 'Joined GitHub' metrics.svg
+          ! grep -q 'Followed by' metrics.svg
 
       - name: Commit metrics
         run: |
