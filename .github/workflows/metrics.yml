@@ -9,18 +9,30 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: production
     permissions:
       contents: write
     steps:
-      # 1. Base (header)
+      - uses: actions/checkout@v4
+
       - name: Metrics - Base
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           config_timezone: Europe/Lisbon
           base: header
-          filename: metrics.svg
+          filename: metrics.generated.svg
+          output_action: none
           repositories_skipped: anamsmartins, anamsmartins/anamsmartins
-          committer_message: "Daily Metrics Update"
+
+      - name: Apply custom layout
+        run: python3 .github/scripts/format-metrics.py
+
+      - name: Commit metrics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add metrics.svg
+          git diff --cached --quiet || git commit -m "Daily Metrics Update"
+          git push
