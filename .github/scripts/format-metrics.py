@@ -11,7 +11,6 @@ WIDTH = 480
 HEIGHT = 52
 
 CUSTOM_CSS = (
-    "#metrics-end{width:100%}"
     ".items-wrapper{width:100%;height:100%;display:flex;flex-direction:column;"
     "justify-content:flex-start;box-sizing:border-box;padding:0;margin:0}"
     ".items-wrapper section,.items-wrapper .row{width:100%;margin:0;padding:0}"
@@ -46,9 +45,11 @@ def extract_calendar_field(source: str) -> str:
     if not match:
         raise ValueError("Could not find calendar field in generated SVG")
     calendar = match.group(1)
+    calendar = re.sub(r'\swidth="[^"]*"', "", calendar, count=1)
+    calendar = re.sub(r'\sheight="[^"]*"', "", calendar, count=1)
     return re.sub(
-        r'(<svg[^>]*viewBox="0 0 210 11")[^>]*>',
-        r'\1 width="100%" height="28">',
+        r'(<svg[^>]*viewBox="0 0 210 11")',
+        r'\1 width="100%" height="28"',
         calendar,
         count=1,
     )

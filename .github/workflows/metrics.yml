@@ -23,16 +23,25 @@ jobs:
           config_timezone: Europe/Lisbon
           base: header
           filename: metrics.generated.svg
-          output_action: none
+          output_action: "none"
           repositories_skipped: anamsmartins, anamsmartins/anamsmartins
 
       - name: Apply custom layout
         run: python3 .github/scripts/format-metrics.py
 
+      - name: Verify compact layout
+        run: |
+          grep -q 'height="52"' metrics.svg
+          grep -q 'viewBox="0 0 480 52"' metrics.svg
+          grep -q 'Contributed to' metrics.svg
+          ! grep -q 'class="avatar"' metrics.svg
+          ! grep -q 'Joined GitHub' metrics.svg
+
       - name: Commit metrics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add metrics.svg
           git diff --cached --quiet || git commit -m "Daily Metrics Update"
           git push
