@@ -19,21 +19,15 @@ Full-stack engineer building reliable backends with **Java & Spring** and clean 
 
 ℹ️ Check out my work
 
-[![Website](https://img.shields.io/badge/website-e39c64?style=for-the-badge&logo=pagekit)](https://anamsmartins.github.io/)
-[![Academic Projects](https://img.shields.io/badge/academic%20projects-2D3250?style=for-the-badge&logo=htmlacademy)](https://github.com/Academcis)
-[![Research Publications](https://img.shields.io/badge/research%20publications-A56F63?style=for-the-badge&logo=readdotcv)](https://orcid.org/0009-0009-1892-4133)
+[![Website](https://img.shields.io/badge/website-e39c64?style=for-the-badge&logo=pagekit&logoColor=white)](https://anamsmartins.github.io/)
+[![Academic Projects](https://img.shields.io/badge/academic%20projects-2D3250?style=for-the-badge&logo=htmlacademy&logoColor=white)](https://github.com/Academcis)
+[![Research Publications](https://img.shields.io/badge/research%20publications-A56F63?style=for-the-badge&logo=readdotcv&logoColor=white)](https://orcid.org/0009-0009-1892-4133)
 
 # 
 
 📪 Reach me here
 
-<p >
-  <a href="mailto:anaritamsmartins@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
-  </a>
-  <a href="https://www.linkedin.com/in/ana-ms-martins/" target="_blank">
-    <img src="https://img.shields.io/badge/Linkedin-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white">
-  </a>
-</p>
+[![Gmail](https://img.shields.io/badge/gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anaritamsmartins@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/linkedin-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ana-ms-martins/)
 
 <br>
