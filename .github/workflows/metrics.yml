@@ -34,19 +34,43 @@ jobs:
             })
             // Remove the whole repositories / sponsors block (if still present)
             document.querySelector("section.largeable")?.remove()
+            // Remove empty left column left over from the two-column header layout
+            document.querySelectorAll(".row > section").forEach(section => {
+              if (!section.querySelector(".field")) section.remove()
+            })
           extras_css: |
+            .items-wrapper,
+            .items-wrapper section,
+            .items-wrapper .row,
+            .items-wrapper .row section {
+              margin: 0 !important;
+              padding: 0 !important;
+            }
             .items-wrapper {
               width: 100%;
               display: flex;
               flex-direction: column;
             }
+            .items-wrapper .calendar.field {
+              margin: 0 !important;
+              padding: 0 !important;
+            }
             .items-wrapper .calendar svg {
               width: 100%;
               height: 28px;
+              margin: 0 !important;
+            }
+            .items-wrapper section > .field {
+              margin-left: 0 !important;
+              margin-right: 0 !important;
             }
             .items-wrapper .field {
               font-size: 15px;
-              margin: 0;
+              margin: 0 !important;
+              padding: 0 !important;
+            }
+            .items-wrapper .field svg {
+              margin: 0 8px 0 0 !important;
             }
 
           
