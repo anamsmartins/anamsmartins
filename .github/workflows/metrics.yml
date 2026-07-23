@@ -10,11 +10,16 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Metrics — Header
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          config_timezone: Europe/Lisbon
            # Only the header section (drops repos, community, activity, metadata)
           base: header
+          filename: metrics.svg
+          repositories_skipped: anamsmartins, anamsmartins/anamsmartins
+          committer_message: "Daily Metrics Update"
           extras_js: |
             // Remove name + avatar
             document.querySelector("h1")?.remove()
