@@ -9,41 +9,37 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
-    environment:
-      name: production
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Metrics - Base
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          config_timezone: Europe/Lisbon
+           # Only the header section (drops repos, community, activity, metadata)
           base: header
-          filename: metrics.generated.svg
-          output_action: "none"
-          repositories_skipped: anamsmartins, anamsmartins/anamsmartins
+          extras_js: |
+            // Remove name + avatar
+            document.querySelector("h1")?.remove()
+            // Remove "Joined GitHub..." and "Followed by..." rows
+            document.querySelectorAll(".field").forEach(el => {
+              const text = el.textContent?.trim() ?? ""
+              if (text.startsWith("Joined") || text.startsWith("Followed by")) {
+                el.remove()
+              }
+            })
+            // Remove the whole repositories / sponsors block (if still present)
+            document.querySelector("section.largeable")?.remove()
+          extras_css: |
+            .items-wrapper {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+            .items-wrapper .calendar svg {
+              width: 100%;
+              height: 28px;
+            }
+            .items-wrapper .field {
+              font-size: 15px;
+              margin: 0;
+            }
 
-      - name: Apply custom layout
-        run: python3 .github/scripts/format-metrics.py
-
-      - name: Verify compact layout
-        run: |
-          grep -q 'height="52"' metrics.svg
-          grep -q 'viewBox="0 0 480 52"' metrics.svg
-          grep -q 'Contributed to' metrics.svg
-          test "$(grep -c 'class="field calendar"' metrics.svg)" -eq 1
-          ! grep -q 'class="avatar"' metrics.svg
-          ! grep -q 'Joined GitHub' metrics.svg
-          ! grep -q 'Followed by' metrics.svg
-
-      - name: Commit metrics
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase origin main
-          git add metrics.svg
-          git diff --cached --quiet || git commit -m "Daily Metrics Update"
-          git push
+          
