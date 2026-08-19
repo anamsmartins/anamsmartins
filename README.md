@@ -20,7 +20,7 @@ Full-stack engineer building reliable backends with **Java & Spring** and clean 
 
 [![Website](https://img.shields.io/badge/website-e39c64?style=for-the-badge&logo=pagekit&logoColor=white)](https://anamsmartins.github.io/)
 [![Academic Projects](https://img.shields.io/badge/academic%20projects-2D3250?style=for-the-badge&logo=htmlacademy&logoColor=white)](https://github.com/Academcis)
-[![Research Publications](https://img.shields.io/badge/research%20publications-A56F63?style=for-the-badge&logo=readdotcv&logoColor=white)](https://orcid.org/0009-0009-1892-4133)
+[![ORCID](https://img.shields.io/badge/orcid-a5cd39?style=for-the-badge&logo=orcid&logoColor=white)](https://orcid.org/0009-0009-1892-4133)
 
 # 
 
